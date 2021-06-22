@@ -1,0 +1,28 @@
+// imports
+@use "../abstracts/abstracts" as *;
+
+.feature {
+  &__content {
+    @include maxWidthLg;
+    @include sectionSpacingSm;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 5rem;
+  }
+
+  &__heading {
+    @include headingStyles;
+    font-size: size(xxl);
+    padding-bottom: 1rem;
+  }
+
+  &__desc {
+    @include textStyles;
+    font-size: size(xs);
+  }
+
+  &--bg {
+    background-color: color(paleBlue);
+  }
+}

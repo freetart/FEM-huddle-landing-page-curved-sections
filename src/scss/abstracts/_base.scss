@@ -45,6 +45,10 @@ input {
   font-family: inherit;
 }
 
+.bg-pattern {
+  margin-bottom: -5px;
+}
+
 // prefers reduced motion
 @media (prefers-reduced-motion: reduce) {
   *,
