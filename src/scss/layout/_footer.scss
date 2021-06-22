@@ -12,6 +12,10 @@
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 5rem;
+
+    @include responsive(md) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__logo {
@@ -24,6 +28,10 @@
     font-size: size(xxs);
     padding-bottom: 2rem;
     width: 75%;
+
+    @include responsive(md) {
+      width: 100%;
+    }
   }
 
   &__contact {
@@ -41,6 +49,12 @@
   &__social-icon {
     color: color(white);
     margin: 1rem 2rem 0 2rem;
+    transition: $main-transition;
+
+    &:hover,
+    &:focus {
+      color: color(pink);
+    }
   }
 
   &__social-icon:nth-child(1) {
@@ -58,6 +72,10 @@
     font-size: size(xxs);
     padding: 2rem 0;
     width: 75%;
+
+    @include responsive(md) {
+      width: 100%;
+    }
   }
 
   &__form {
@@ -72,5 +90,10 @@
     border-radius: $main-radius;
     margin-right: 2rem;
     font-size: size(xxs);
+
+    @include responsive(md) {
+      width: 100%;
+      margin-bottom: 3rem;
+    }
   }
 }

@@ -9,6 +9,17 @@
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 5rem;
+
+    @include responsive(md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__info {
+    @include responsive(md) {
+      text-align: center;
+      order: -1;
+    }
   }
 
   &__heading {

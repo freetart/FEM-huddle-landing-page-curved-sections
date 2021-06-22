@@ -13,5 +13,9 @@
 
   &__logo {
     width: 20rem;
+
+    @include responsive(md) {
+      width: 15rem;
+    }
   }
 }

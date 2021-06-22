@@ -9,5 +9,10 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 5rem;
     text-align: center;
+
+    @include responsive(md) {
+      grid-template-columns: 1fr;
+      gap: 10rem;
+    }
   }
 }

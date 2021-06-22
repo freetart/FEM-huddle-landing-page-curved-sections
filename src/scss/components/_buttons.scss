@@ -20,16 +20,14 @@
       box-shadow: $active-shadow;
       background-color: color(lightPink);
     }
-  }
 
-  &--form {
-    background-color: color(pink);
-    color: color(white);
-    padding: 1rem 2rem;
-    border-radius: $main-radius;
-    outline: 0;
-    border: 0;
-    font-size: size(xxs);
+    @include responsive(lg) {
+      width: 50%;
+    }
+
+    @include responsive(md) {
+      width: 100%;
+    }
   }
 
   &--secondary {
@@ -46,6 +44,26 @@
       box-shadow: $active-shadow;
       color: color(lightPink);
       border: 0.2rem solid color(lightPink);
+    }
+  }
+
+  &--form {
+    background-color: color(pink);
+    color: color(white);
+    padding: 1rem 2rem;
+    border-radius: $main-radius;
+    outline: 0;
+    border: 0;
+    font-size: size(xxs);
+    transition: $main-transition;
+
+    &:hover,
+    &:focus {
+      background-color: color(lightPink);
+    }
+
+    @include responsive(md) {
+      width: 100%;
     }
   }
 }

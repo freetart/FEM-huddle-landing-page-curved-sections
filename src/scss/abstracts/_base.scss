@@ -17,6 +17,10 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+
+  @include responsive(sm) {
+    font-size: 55.5%;
+  }
 }
 
 body {
