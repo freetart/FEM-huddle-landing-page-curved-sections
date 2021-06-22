@@ -1,0 +1,32 @@
+// colors
+$colors: (
+  // shades
+  black: hsl(0, 0%, 0%),
+  white: hsl(0, 0%, 100%),
+  // primary
+  pink: hsl(322, 100%, 66%),
+  lightPink: hsl(321, 100%, 78%),
+  lightRed: hsl(0, 100%, 63%),
+  // neutral
+  darkCyan: hsl(192, 100%, 9%),
+  paleBlue: hsl(207, 100%, 98%)
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+// font sizes
+$font-sizes: (
+  xxl: 4.5rem,
+  xl: 4rem,
+  lg: 3.5rem,
+  md: 3rem,
+  sm: 2.5rem,
+  xs: 2rem,
+  xxs: 1.5rem,
+);
+
+@function size($size) {
+  @return map-get($font-sizes, $size);
+}

@@ -1,0 +1,17 @@
+{
+  "name": "huddle-landing-page-curved-sections",
+  "version": "1.0.0",
+  "description": "huddle landing page with curved sections project for frontend mentor",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel serve ./src/index.html",
+    "build": "parcel build ./src/index.html"
+  },
+  "keywords": [],
+  "author": "Chris M (habibdev)",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.0-beta.3.1",
+    "parcel": "^2.0.0-beta.3.1"
+  }
+}
