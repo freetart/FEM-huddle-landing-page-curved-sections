@@ -1,0 +1,31 @@
+// imports
+@use "../abstracts/abstracts" as *;
+
+.tag {
+  @include flexCenter;
+  text-align: center;
+  flex-wrap: wrap;
+  padding: 2rem 2rem 1rem 2rem;
+  background-color: color(darkCyan);
+
+  &__heading {
+    @include textStyles;
+    font-size: size(xxs);
+    color: color(white);
+  }
+
+  &__link {
+    @include headingStyles;
+    color: color(pink);
+    outline: 0;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  &__logo {
+    width: 5rem;
+  }
+}
