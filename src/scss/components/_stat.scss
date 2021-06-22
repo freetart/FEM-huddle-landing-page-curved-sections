@@ -1,0 +1,19 @@
+// imports
+@use "../abstracts/abstracts" as *;
+
+.stat {
+  &__icon {
+    width: 5rem;
+  }
+
+  &__number {
+    @include headingStyles;
+    font-size: size(xxl) + 5rem;
+  }
+
+  &__desc {
+    @include textStyles;
+    font-size: size(sm);
+    color: color(gray);
+  }
+}

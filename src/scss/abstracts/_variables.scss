@@ -19,7 +19,8 @@ $colors: (
   lightRed: hsl(0, 100%, 63%),
   // neutral
   darkCyan: hsl(192, 100%, 9%),
-  paleBlue: hsl(207, 100%, 98%)
+  paleBlue: hsl(207, 100%, 98%),
+  gray: hsl(0, 0%, 65%)
 );
 
 @function color($color-name) {
