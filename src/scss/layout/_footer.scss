@@ -1,0 +1,76 @@
+// imports
+@use "../abstracts/abstracts" as *;
+
+.footer {
+  background-color: color(darkCyan);
+  color: color(white);
+
+  &__content {
+    @include sectionSpacingSm;
+    @include maxWidthLg;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 5rem;
+  }
+
+  &__logo {
+    width: 5rem;
+    padding-bottom: 1rem;
+  }
+
+  &__desc {
+    @include textStyles;
+    font-size: size(xxs);
+    padding-bottom: 2rem;
+    width: 75%;
+  }
+
+  &__contact {
+    display: flex;
+    align-items: center;
+    padding-bottom: 2rem;
+  }
+
+  &__contact-text {
+    @include textStyles;
+    font-size: size(xxs);
+    margin-left: 1rem;
+  }
+
+  &__social-icon {
+    color: color(white);
+    margin: 1rem 2rem 0 2rem;
+  }
+
+  &__social-icon:nth-child(1) {
+    margin-left: 0;
+  }
+
+  &__newsletter-title {
+    @include headingStyles;
+    font-size: size(md);
+    text-transform: uppercase;
+  }
+
+  &__newsletter-desc {
+    @include textStyles;
+    font-size: size(xxs);
+    padding: 2rem 0;
+    width: 75%;
+  }
+
+  &__form {
+    margin-top: 2rem;
+  }
+
+  &__form-input {
+    padding: 1rem 2rem;
+    outline: 0;
+    border: 0;
+    width: 60%;
+    border-radius: $main-radius;
+    margin-right: 2rem;
+    font-size: size(xxs);
+  }
+}

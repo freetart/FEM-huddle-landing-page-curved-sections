@@ -22,6 +22,16 @@
     }
   }
 
+  &--form {
+    background-color: color(pink);
+    color: color(white);
+    padding: 1rem 2rem;
+    border-radius: $main-radius;
+    outline: 0;
+    border: 0;
+    font-size: size(xxs);
+  }
+
   &--secondary {
     box-shadow: $main-shadow;
     border-radius: $main-radius;
