@@ -1,0 +1,28 @@
+// imports
+@use "../abstracts/abstracts" as *;
+
+.hero {
+  @include sectionSpacingMd;
+
+  &__content {
+    @include maxWidthLg;
+    text-align: center;
+  }
+
+  &__heading {
+    @include headingStyles;
+    font-size: size(xxl);
+  }
+
+  &__lead {
+    @include textStyles;
+    @include containTextSm;
+    font-size: size(xs);
+    padding: 2rem 0;
+  }
+
+  &__img {
+    width: 75%;
+    margin-top: 10rem;
+  }
+}

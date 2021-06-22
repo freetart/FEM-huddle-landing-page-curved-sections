@@ -5,7 +5,15 @@
   align-items: center;
 }
 
-@mixin sectionSpacing() {
+@mixin sectionSpacingLg() {
+  padding: 20rem 2rem;
+}
+
+@mixin sectionSpacingMd() {
+  padding: 10rem 2rem;
+}
+
+@mixin sectionSpacingSm() {
   padding: 5rem 2rem;
 }
 
@@ -21,6 +29,11 @@
   font-weight: 400;
   letter-spacing: 0.1rem;
   line-height: 1.6;
+}
+
+@mixin containTextSm() {
+  width: 50%;
+  margin: 0 auto;
 }
 
 // container styles

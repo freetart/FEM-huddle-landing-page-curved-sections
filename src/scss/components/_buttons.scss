@@ -1,0 +1,41 @@
+// imports
+@use "../abstracts/abstracts" as *;
+
+.btn {
+  @include textStyles;
+  display: inline-block;
+
+  &--primary {
+    box-shadow: $main-shadow;
+    border-radius: $main-radius;
+    transition: $main-transition;
+    font-size: size(sm);
+    background-color: color(pink);
+    color: color(white);
+    padding: 1.5rem 2rem;
+    width: 30%;
+
+    &:hover,
+    &:focus {
+      box-shadow: $active-shadow;
+      background-color: color(lightPink);
+    }
+  }
+
+  &--secondary {
+    box-shadow: $main-shadow;
+    border-radius: $main-radius;
+    transition: $main-transition;
+    font-size: size(xxs);
+    border: 0.2rem solid color(pink);
+    color: color(pink);
+    padding: 1.5rem 2rem;
+
+    &:hover,
+    &:focus {
+      box-shadow: $active-shadow;
+      color: color(lightPink);
+      border: 0.2rem solid color(lightPink);
+    }
+  }
+}

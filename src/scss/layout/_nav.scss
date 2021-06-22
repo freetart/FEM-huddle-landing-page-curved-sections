@@ -1,0 +1,17 @@
+// imports
+@use "../abstracts/abstracts" as *;
+
+.nav {
+  @include sectionSpacingSm;
+
+  &__content {
+    @include maxWidthLg;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    width: 20rem;
+  }
+}
