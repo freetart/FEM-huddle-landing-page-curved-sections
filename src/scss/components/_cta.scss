@@ -1,0 +1,17 @@
+// imports
+@use "../abstracts/abstracts" as *;
+
+.cta {
+  &__content {
+    @include sectionSpacingLg;
+    @include flexCenter;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  &__heading {
+    @include headingStyles;
+    font-size: size(xxl);
+    margin-bottom: 4rem;
+  }
+}
