@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- aos -->
+    <link rel="stylesheet" href="/index.f57ef3ae.css">
+    <!-- favicon -->
     <link rel="icon" href="/koala.38ec3574.ico">
+    <!-- main scss -->
     <link rel="stylesheet" href="/index.641eefe8.css">
     <title>Frontend Mentor | Huddle Landing Page with Curved Sections</title>
   </head>
   <body>
-    <!-- TODO: preloader | aos js | clientside validation -->
+    <!-- TODO: clientside validation | increment count -->
     <!-- preloader -->
     <div class="preloader">
       <div class="preloader__content">
@@ -33,18 +37,20 @@
       <section class="hero">
         <div class="hero__content">
           <div>
-            <h1 class="hero__heading">
+            <h1 class="hero__heading" data-aos="fade-up">
               Build The Community Your Fans Will Love
             </h1>
-            <p class="hero__lead">
+            <p class="hero__lead" data-aos="fade-up" data-aos-delay="100">
               Huddle re-imagines the way we build communities. You have a voice,
               but so does your audience. Create connections with your users as
               you engage in genuine discussion.
             </p>
-            <a href="#!" class="btn btn--primary"> Get Started For Free </a>
+            <a href="#!" class="btn btn--primary" data-aos="fade-up" data-aos-delay="200">
+              Get Started For Free
+            </a>
           </div>
           <div>
-            <img src="/screen-mockups.b8682938.svg" alt="illustration of screen mockups" class="hero__img">
+            <img src="/screen-mockups.b8682938.svg" alt="illustration of screen mockups" class="hero__img" data-aos="fade-up" data-aos-delay="300">
           </div>
         </div>
       </section>
@@ -55,13 +61,13 @@
       <section class="stats">
         <div class="stats__content">
           <!-- single stat -->
-          <article class="stat">
+          <article class="stat" data-aos="fade-up" data-aos-delay="100">
             <img src="/icon-communities.572c0b81.svg" alt="stat icon" class="stat__icon">
             <h2 class="stat__number">1.4k+</h2>
             <p class="stat__desc">Communities Formed</p>
           </article>
           <!-- single stat -->
-          <article class="stat">
+          <article class="stat" data-aos="fade-up" data-aos-delay="200">
             <img src="/icon-messages.5e380055.svg" alt="stat icon" class="stat__icon">
             <h2 class="stat__number">2.7m+</h2>
             <p class="stat__desc">Messages Sent</p>
@@ -74,15 +80,15 @@
       <section class="feature feature--bg">
         <div class="feature__content">
           <div class="feature__info">
-            <h2 class="feature__heading">Grow Together</h2>
-            <p class="feature__desc">
+            <h2 class="feature__heading" data-aos="fade-up">Grow Together</h2>
+            <p class="feature__desc" data-aos="fade-up" data-aos-delay="100">
               Generate meaningful discussions with your audience and build a
               strong, loyal community. Think of the insightful conversations you
               miss out on with a feedback form.
             </p>
           </div>
           <div>
-            <img src="/illustration-grow-together.bebe9d81.svg" alt="feature image" class="feature__img">
+            <img src="/illustration-grow-together.bebe9d81.svg" alt="feature image" class="feature__img" data-aos="fade-left">
           </div>
         </div>
       </section>
@@ -91,12 +97,14 @@
       <!-- feature / conversations -->
       <section class="feature">
         <div class="feature__content">
-          <div>
+          <div data-aos="fade-right">
             <img src="/illustration-flowing-conversation.0e47728f.svg" alt="feature image" class="feature__img">
           </div>
           <div class="feature__info">
-            <h2 class="feature__heading">Flowing Conversations</h2>
-            <p class="feature__desc">
+            <h2 class="feature__heading" data-aos="fade-up">
+              Flowing Conversations
+            </h2>
+            <p class="feature__desc" data-aos="fade-up" data-aos-delay="100">
               You wouldn't paginate a conversation in real life, so why do it
               online? Our threads have just-in-time loading for a more natural
               flow.
@@ -110,15 +118,15 @@
       <section class="feature feature--bg">
         <div class="feature__content">
           <div class="feature__info">
-            <h2 class="feature__heading">Your Users</h2>
-            <p class="feature__desc">
+            <h2 class="feature__heading" data-aos="fade-up">Your Users</h2>
+            <p class="feature__desc" data-aos="fade-up" data-aos-delay="100">
               It takes no time at all to integrate Huddle with your app's
               authentication solution. This means, once signed in to your app,
               your users can start chatting immediately.
             </p>
           </div>
           <div>
-            <img src="/illustration-your-users.74ea1cc4.svg" alt="feature image" class="feature__img">
+            <img src="/illustration-your-users.74ea1cc4.svg" alt="feature image" class="feature__img" data-aos="fade-left">
           </div>
         </div>
       </section>
@@ -127,8 +135,10 @@
       <!-- cta -->
       <section class="cta">
         <div class="cta__content">
-          <h2 class="cta__heading">Ready To Build Your Community?</h2>
-          <a href="#!" class="btn btn--primary">Get Started For Free</a>
+          <h2 class="cta__heading" data-aos="fade-down">
+            Ready To Build Your Community?
+          </h2>
+          <a href="#!" class="btn btn--primary" data-aos="fade-up">Get Started For Free</a>
         </div>
       </section>
     </main>
@@ -190,6 +200,8 @@
       <img src="/habibdevgif.f92d2f35.gif" alt="logo" class="tag__logo">
     </article>
 
+    <!-- aos -->
+    <script src="/index.4ee429df.js"></script>
     <!-- font awesome -->
     <script src="/index.3b9a002e.js"></script>
     <script src="/index.98c004b0.js"></script>

@@ -140,12 +140,12 @@
       this[globalName] = mainExports;
     }
   }
-})({"1XQsC":[function(require,module,exports) {
+})({"4ivTV":[function(require,module,exports) {
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d751713988987e9331980363e24189ce";
-module.bundle.HMR_BUNDLE_ID = "e0dcefe8574811b2e7c6ae8a4ee429df"; // @flow
+module.bundle.HMR_BUNDLE_ID = "b79f9c79d9695be7d6bad44f94692432"; // @flow
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE */ /*::
 import type {
   HMRAsset,
@@ -380,66 +380,7 @@ function hmrAcceptRun(bundle/*: ParcelRequire */ , id/*: string */ ) {
     acceptedAssets[id] = true;
 }
 
-},{}],"SXDIM":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-var _aos = require("aos");
-var _aosDefault = parcelHelpers.interopDefault(_aos);
-var _preloaderJs = require("./preloader.js");
-var _preloaderJsDefault = parcelHelpers.interopDefault(_preloaderJs);
-const init = ()=>{
-    _preloaderJsDefault.default();
-    _aosDefault.default.init({
-        offset: 100,
-        duration: 1000,
-        once: true
-    });
-};
-window.addEventListener('DOMContentLoaded', init);
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"367CR","./preloader.js":"5vtes","aos":"7rvwx"}],"367CR":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, '__esModule', {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === 'default' || key === '__esModule') return;
-        // Skip duplicate re-exports when they have the same value.
-        if (key in dest && dest[key] === source[key]) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"5vtes":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-const preloader = ()=>{
-    const preloaderEl = document.querySelector('.preloader');
-    window.addEventListener('load', function() {
-        preloaderEl.classList.add('hide-preloader');
-    });
-};
-exports.default = preloader;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}],"7rvwx":[function(require,module,exports) {
+},{}],"7rvwx":[function(require,module,exports) {
 (function(e, t) {
     "object" == typeof exports && "object" == typeof module ? module.exports = t() : "function" == typeof define && define.amd ? define([], t) : "object" == typeof exports ? exports.AOS = t() : e.AOS = t();
 })(this, function() {
@@ -883,6 +824,6 @@ exports.default = preloader;
     ]);
 });
 
-},{}]},["1XQsC","SXDIM"], "SXDIM", "parcelRequirefa41")
+},{}]},["4ivTV","7rvwx"], "7rvwx", "parcelRequirefa41")
 
-//# sourceMappingURL=index.4ee429df.js.map
+//# sourceMappingURL=index.94692432.js.map
