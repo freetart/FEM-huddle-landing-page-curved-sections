@@ -77,23 +77,4 @@
       width: 100%;
     }
   }
-
-  &__form {
-    margin-top: 2rem;
-  }
-
-  &__form-input {
-    padding: 1rem 2rem;
-    outline: 0;
-    border: 0;
-    width: 60%;
-    border-radius: $main-radius;
-    margin-right: 2rem;
-    font-size: size(xxs);
-
-    @include responsive(md) {
-      width: 100%;
-      margin-bottom: 3rem;
-    }
-  }
 }

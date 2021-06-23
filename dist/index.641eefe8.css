@@ -149,6 +149,76 @@ input {
   font-size: 4.5rem;
   margin-bottom: 4rem;
 }
+.form {
+  margin-top: 2rem;
+}
+.form.error .form__error, .form.error .form__success {
+  display: block;
+  visibility: visible;
+}
+.form.error .form__message {
+  display: block;
+}
+.form.error .form__success {
+  display: none;
+  visibility: hidden;
+}
+.form.success .form__success {
+  display: block !important;
+  visibility: visible !important;
+}
+.form.success .form__message {
+  display: none;
+}
+.form.success .form__error, .form.success .form__success {
+  display: none;
+  visibility: hidden;
+}
+.form__input-container {
+  width: 60%;
+  margin-right: 2rem;
+  display: inline-block;
+  position: relative;
+}
+@media (max-width: 800px) {
+  .form__input-container {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+}
+.form__error, .form__success {
+  position: absolute;
+  top: 1.3rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: red;
+  display: none;
+  visibility: hidden;
+}
+.form__success {
+  color: green;
+  display: none;
+  visibility: hidden;
+}
+.form__message {
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  line-height: 1.6;
+  font-size: 1.4rem;
+  position: absolute;
+  top: -3rem;
+  left: 2rem;
+  color: red;
+  display: none;
+}
+.form__input {
+  padding: 1rem 2rem;
+  outline: 0;
+  border: 0;
+  width: 100%;
+  border-radius: 5rem;
+  font-size: 1.5rem;
+}
 .preloader {
   position: fixed;
   top: 0;
@@ -413,24 +483,6 @@ input {
 @media (max-width: 800px) {
   .footer__newsletter-desc {
     width: 100%;
-  }
-}
-.footer__form {
-  margin-top: 2rem;
-}
-.footer__form-input {
-  padding: 1rem 2rem;
-  outline: 0;
-  border: 0;
-  width: 60%;
-  border-radius: 5rem;
-  margin-right: 2rem;
-  font-size: 1.5rem;
-}
-@media (max-width: 800px) {
-  .footer__form-input {
-    width: 100%;
-    margin-bottom: 3rem;
   }
 }
 .tag {

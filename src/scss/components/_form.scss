@@ -1,0 +1,86 @@
+// imports
+@use "../abstracts/abstracts" as *;
+
+.form {
+  margin-top: 2rem;
+
+  &.error {
+    .form__error {
+      display: block;
+      visibility: visible;
+    }
+
+    .form__message {
+      display: block;
+    }
+
+    .form__success {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+  &.success {
+    .form__success {
+      display: block !important;
+      visibility: visible !important;
+    }
+
+    .form__message {
+      display: none;
+    }
+
+    .form__error {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+  &__input-container {
+    width: 60%;
+    margin-right: 2rem;
+    display: inline-block;
+    position: relative;
+
+    @include responsive(md) {
+      width: 100%;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__error {
+    position: absolute;
+    top: 1.3rem;
+    right: 1rem;
+    font-size: size(xxs);
+    color: red;
+    display: none;
+    visibility: hidden;
+  }
+
+  &__success {
+    @extend .form__error;
+    color: green;
+    display: none;
+    visibility: hidden;
+  }
+
+  &__message {
+    @include textStyles;
+    font-size: size(xxs) - 0.1rem;
+    position: absolute;
+    top: -3rem;
+    left: 2rem;
+    color: red;
+    display: none;
+  }
+
+  &__input {
+    padding: 1rem 2rem;
+    outline: 0;
+    border: 0;
+    width: 100%;
+    border-radius: $main-radius;
+    font-size: size(xxs);
+  }
+}

@@ -235,12 +235,17 @@
             To recieve tips on how to grow your community, sign up to our weekly
             newsletter. We’ll never send you spam or pass on your email address
           </p>
-          <form class="footer__form">
-            <input
-              type="text"
-              placeholder="Enter your email..."
-              class="footer__form-input"
-            />
+          <form class="form">
+            <div class="form__input-container">
+              <input
+                type="text"
+                placeholder="Enter your email..."
+                class="form__input"
+              />
+              <i class="fas fa-exclamation-circle fa-fw form__error"></i>
+              <i class="fas fa-check-circle fa-fw form__success"></i>
+              <small class="form__message">Hello</small>
+            </div>
             <button type="submit" class="btn btn--form">Subscribe</button>
           </form>
         </div>
