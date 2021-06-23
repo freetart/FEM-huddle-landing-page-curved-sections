@@ -381,8 +381,57 @@ function hmrAcceptRun(bundle/*: ParcelRequire */ , id/*: string */ ) {
 }
 
 },{}],"SXDIM":[function(require,module,exports) {
-"use scrict";
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+var _preloaderJs = require("./preloader.js");
+var _preloaderJsDefault = parcelHelpers.interopDefault(_preloaderJs);
+const init = ()=>{
+    _preloaderJsDefault.default();
+};
+window.addEventListener('DOMContentLoaded', init);
 
-},{}]},["1XQsC","SXDIM"], "SXDIM", "parcelRequirefa41")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"367CR","./preloader.js":"5vtes"}],"367CR":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, '__esModule', {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === 'default' || key === '__esModule') return;
+        // Skip duplicate re-exports when they have the same value.
+        if (key in dest && dest[key] === source[key]) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"5vtes":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+const preloader = ()=>{
+    const preloaderEl = document.querySelector('.preloader');
+    window.addEventListener('load', function() {
+        preloaderEl.classList.add('hide-preloader');
+    });
+};
+exports.default = preloader;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}]},["1XQsC","SXDIM"], "SXDIM", "parcelRequirefa41")
 
 //# sourceMappingURL=index.4ee429df.js.map
