@@ -13,7 +13,7 @@
     <title>Frontend Mentor | Huddle Landing Page with Curved Sections</title>
   </head>
   <body>
-    <!-- TODO: clientside validation | increment count -->
+    <!-- TODO: increment count -->
     <!-- preloader -->
     <div class="preloader">
       <div class="preloader__content">
@@ -77,7 +77,10 @@
               alt="stat icon"
               class="stat__icon"
             />
-            <h2 class="stat__number">1.4k+</h2>
+            <div class="stat__container">
+              <h2 class="stat__number" data-target="140">1.4</h2>
+              <span class="stat__text">k+</span>
+            </div>
             <p class="stat__desc">Communities Formed</p>
           </article>
           <!-- single stat -->
@@ -87,7 +90,10 @@
               alt="stat icon"
               class="stat__icon"
             />
-            <h2 class="stat__number">2.7m+</h2>
+            <div class="stat__container">
+              <h2 class="stat__number" data-target="270">2.7</h2>
+              <span class="stat__text">m+</span>
+            </div>
             <p class="stat__desc">Messages Sent</p>
           </article>
         </div>

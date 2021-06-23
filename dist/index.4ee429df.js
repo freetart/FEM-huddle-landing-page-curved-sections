@@ -384,12 +384,15 @@ function hmrAcceptRun(bundle/*: ParcelRequire */ , id/*: string */ ) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _aos = require("aos");
 var _aosDefault = parcelHelpers.interopDefault(_aos);
+var _statsCounterJs = require("./statsCounter.js");
+var _statsCounterJsDefault = parcelHelpers.interopDefault(_statsCounterJs);
 var _preloaderJs = require("./preloader.js");
 var _preloaderJsDefault = parcelHelpers.interopDefault(_preloaderJs);
 var _validateEmailJs = require("./validateEmail.js");
 var _validateEmailJsDefault = parcelHelpers.interopDefault(_validateEmailJs);
 const init = ()=>{
     _preloaderJsDefault.default();
+    _statsCounterJsDefault.default();
     _validateEmailJsDefault.default();
     _aosDefault.default.init({
         offset: 100,
@@ -399,7 +402,7 @@ const init = ()=>{
 };
 window.addEventListener('DOMContentLoaded', init);
 
-},{"aos":"7rvwx","./preloader.js":"5vtes","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","./validateEmail.js":"4D4d3"}],"5vtes":[function(require,module,exports) {
+},{"aos":"7rvwx","./preloader.js":"5vtes","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","./validateEmail.js":"4D4d3","./statsCounter.js":"3eXSz"}],"5vtes":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 const preloader = ()=>{
@@ -480,6 +483,42 @@ const validateEmail = ()=>{
     });
 };
 exports.default = validateEmail;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}],"3eXSz":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+const statsCounter = ()=>{
+    // dom elements
+    const statsNumbers = document.querySelector('.stats');
+    const counters = document.querySelectorAll('.stat__number');
+    // observe container when scoll
+    const options = {
+        rootMargin: '1px'
+    };
+    const observer = new IntersectionObserver(function(entries, observer1) {
+        entries.forEach((entry)=>{
+            if (entry.target) countStats();
+        });
+    }, options);
+    observer.observe(statsNumbers);
+    // count stats
+    function countStats() {
+        counters.forEach((counter)=>{
+            counter.innerText = '0';
+            const updateCounter = ()=>{
+                const target = +counter.getAttribute('data-target');
+                const c = +counter.innerText;
+                const increment = target / 200;
+                if (c < target) {
+                    counter.innerText = `${Math.ceil(c + increment)}`;
+                    setTimeout(updateCounter, 1);
+                } else counter.innerText = target;
+            };
+            updateCounter();
+        });
+    }
+};
+exports.default = statsCounter;
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}]},["1XQsC","SXDIM"], "SXDIM", "parcelRequirefa41")
 
