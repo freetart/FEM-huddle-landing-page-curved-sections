@@ -113,6 +113,9 @@ input {
     width: 100%;
   }
 }
+.btn-container {
+  width: 100%;
+}
 .stat__icon {
   width: 5rem;
 }
